@@ -1,0 +1,30 @@
+
+================= description ================
+
+this module can be used to count connections number of specified dimension
+for example, you can get connection number of every host or user
+
+==============================================
+
+
+================= nginx.conf =================
+
+group_conn_zone size=16M;
+group_conn_key $request_method;
+group_conn_switch on;
+
+server {
+    listen 80;
+
+    location /test1 {
+        group_conn_switch off;
+    }
+
+    location /test2 {
+        group_conn_switch on;
+    }
+}
+
+==============================================
+
+
