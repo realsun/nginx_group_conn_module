@@ -1,8 +1,8 @@
  
- 
 /**
  * @file ngx_http_group_conn_module.c
  * @date 2016/06/29 17:44:46
+ * @author realsun
  * @brief 模块可以按照指定的维度进行connection的统计，并定义变量，其他阶段可以根据维度的名称（如host）获得当前相应的connections数量
  *  
  **/
